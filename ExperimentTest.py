@@ -1,5 +1,6 @@
 import unittest
 import Experiment
+import Experiment2
 
 class MyTestCase(unittest.TestCase):
 
@@ -26,9 +27,10 @@ class MyTestCase(unittest.TestCase):
   def test_t6(self):
     r1 = Experiment.largest([-3,-2,-3,-1,-4]) 
     self.assertEqual(r1, -1)
-
-  #def test_t7(self):
-  #  self.assertRaises(ValueError, Experiment.largest, [])
+	
+  def test_t7(self):
+	r1 = Experiment2.smallest([-3,-2,-3,-1,-4])
+	self.assertEqual(r1, -4)
 
 if __name__ == '__main__':
   unittest.main()
